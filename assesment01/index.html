@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assessment 01</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <!-- 1) JS in the HEAD: a function that changes the paragraph text -->
+    <script>
+      function changeTextFromHead() {
+        const p = document.getElementById("message");
+        p.textContent = "Text updated from the HEAD <script> function!"
+      }
+    </script>
+  </head>
+  <body>
+    <header class="wrapper">
+      <h1>Assessment 01 Demo</h1>
+      <p class="subtitle">Multiple ways to use JavaScript + simple styling</p>
+    </header>
+
+    <main class="wrapper grid">
+      <!-- IMAGE + CONTROLS -->
+      <section class="card">
+        <h2>Image Viewer</h2>
+
+        <!-- Image with ID -->
+        <img
+          id="galleryImage"
+          src="images/photo1.jpg"
+          alt="Sample gallery image"
+          width="420"
+          height="280"
+        />
+
+        <div class="controls">
+          <!-- 3 buttons to change the image -->
+          <button onclick="swapImage('photo1.jpg')">Show Image 1</button>
+          <button onclick="swapImage('photo2.jpg')">Show Image 2</button>
+          <button onclick="swapImage('photo3.jpg')">Show Image 3</button>
+        </div>
+
+        <div class="controls">
+          <!-- CSS/JS controls -->
+          <button onclick="changeImageWidth(320)">Width: 320px</button>
+          <button onclick="changeImageWidth(480)">Width: 480px</button>
+          <button onclick="changeImageWidth(640)">Width: 640px</button>
+        </div>
+
+        <div class="controls">
+          <!-- Show / Hide -->
+          <button onclick="showImage()">Show Image</button>
+          <button onclick="hideImage()">Hide Image</button>
+        </div>
+      </section>
+
+      <!-- TEXT + CONTROLS -->
+      <section class="card">
+        <h2>Paragraph Text</h2>
+
+        <!-- Paragraph with ID -->
+        <p id="message">This will be updated by different scripts.</p>
+
+        <div class="controls">
+          <!-- Button calls external JS function -->
+          <button onclick="changeTextExternal()">
+            Change Text (External JS)
+          </button>
+
+          <!-- Button calls HEAD <script> function -->
+          <button onclick="changeTextFromHead()">
+            Change Text (Head Script)
+          </button>
+        </div>
+
+        <div class="controls">
+          <!-- Change paragraph color -->
+          <button onclick="setParagraphColor('#0d9488')">Teal</button>
+          <button onclick="setParagraphColor('#ef4444')">Red</button>
+          <button onclick="setParagraphColor('#3b82f6')">Blue</button>
+          <button onclick="setParagraphColor('')">Reset</button>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.getElementById("message");
+        p.textContent = "Hi! This text was added by a BODY";
+      });
+    </script>
+
+    <!-- 3) External JS file -->
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
