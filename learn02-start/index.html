@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adding JavaScript to HTML</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      function myFunction() {
+        document.getElementById("sample").innerHTML =
+          "Paragraph changed from head.";
+      }
+    </script>
+    <script src="scripts/script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Adding JavaScript to HTML</h1>
+    </header>
+    <main>
+      <button type="button" onclick="myFunction()">
+        Call function in head
+      </button>
+      <button type="button" onclick="myFunction2()">
+        Call function in external file
+      </button>
+      <p id="start"></p>
+      <script>
+        document.getElementById("start").innerHTML =
+          "JavaScript in side the script tag";
+      </script>
+
+      <p id="sample">This paragraph has an ID of sample</p>
+      <button
+        type="button"
+        onclick='document.getElementById("sample").innerHTML="Travis Routhier"'
+      >
+        Click here!
+      </button>
+      <button
+        type="button"
+        onclick='document.getElementById("sample").style.fontSize="30px";'
+      >
+        Bigger Text
+      </button>
+      <div class="buttons">
+        <button onclick="document.getElementById('pet').src='images/dog.jpg'">
+          dog
+        </button>
+        <button onclick="document.getElementById('pet').src='images/cat.jpg'">
+          cat
+        </button>
+      </div>
+
+      <img src="images/dog.jpg" alt="animal" id="pet" class="center" />
+      <div class="buttons">
+        <button onclick="document.getElementById('pet').style.display='block'">
+          show
+        </button>
+        <button onclick="document.getElementById('pet').style.display='none'">
+          hide
+        </button>
+      </div>
+
+      <div id="output">
+        <h2>Output</h2>
+        <script>
+          document.write("document.write() writes this text.");
+        </script>
+        <p id="oops"></p>
+        <button onclick="document.write('OOPS!')">OOPS!</button>
+
+        <script>
+          alert("This is an alert box!");
+        </script>
+
+        ><script>
+          console.log("This is a console log message.")
+        </script>
+      </div>
+    </main>
+    <footer>
+      <p>&copy;2022 Meri Engel</p>
+    </footer>
+  </body>
+</html>
