@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Menu – Add to Cart</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <h1>Lunch Menu</h1>
+    <p class="muted">Tap <em>Add</em> on items to put them in your cart. Total updates instantly.</p>
+  </header>
+
+  <main class="wrap layout">
+    <!-- MENU -->
+    <section>
+      <h2>Menu</h2>
+
+      <h3>Drinks</h3>
+      <ul class="menu">
+        <li class="item" data-key="water"><span>Water (bottle)</span><span class="price" data-price>1.50</span><div class="actions"><button class="btn add">Add</button><button class="btn minus">−</button><span class="qty" data-qty>0</span></div></li>
+        <li class="item" data-key="soda"><span>Soda</span><span class="price" data-price>2.00</span><div class="actions"><button class="btn add">Add</button><button class="btn minus">−</button><span class="qty" data-qty>0</span></div></li>
+        <li class="item" data-key="tea"><span>Iced Tea</span><span class="price" data-price>2.25</span><div class="actions"><button class="btn add">Add</button><button class="btn minus">−</button><span class="qty" data-qty>0</span></div></li>
+        <li class="item" data-key="coffee"><span>Coffee</span><span class="price" data-price>2.00</span><div class="actions"><button class="btn add">Add</button><button class="btn minus">−</button><span class="qty" data-qty>0</span></div></li>
+        <li class="item" data-key="lemonade"><span>Lemonade</span><span class="price" data-price>2.50</span><div class="actions"><button class="btn add">Add</button><button class="btn minus">−</button><span class="qty" data-qty>0</span></div></li>
+      </ul>
+
+      <h3>Sandwiches</h3>
+      <ul class="menu">
+        <li class="item" data-key="hamburger"><span>Hamburger</span><span class="price" data-price>5.00</span><div class="actions"><button class="btn add">Add</button><button class="btn minus">−</button><span class="qty" data-qty>0</span></div></li>
+        <li class="item" data-key="cheeseburger"><span>Cheeseburger</span><span class="price" data-price>5.50</span><div class="actions"><button class="btn add">Add</button><button class="btn minus">−</button><span class="qty" data-qty>0</span></div></li>
+        <li class="item" data-key="chicken"><span>Chicken Sandwich</span><span class="price" data-price>6.00</span><div class="actions"><button class="btn add">Add</button><button class="btn minus">−</button><span class="qty" data-qty>0</span></div></li>
+        <li class="item" data-key="veggie"><span>Veggie Wrap</span><span class="price" data-price>5.75</span><div class="actions"><button class="btn add">Add</button><button class="btn minus">−</button><span class="qty" data-qty>0</span></div></li>
+        <li class="item" data-key="hotdog"><span>Hot Dog</span><span class="price" data-price>3.50</span><div class="actions"><button class="btn add">Add</button><button class="btn minus">−</button><span class="qty" data-qty>0</span></div></li>
+      </ul>
+
+      <h3>Desserts & Sides</h3>
+      <ul class="menu">
+        <li class="item" data-key="fries"><span>Fries</span><span class="price" data-price>2.75</span><div class="actions"><button class="btn add">Add</button><button class="btn minus">−</button><span class="qty" data-qty>0</span></div></li>
+        <li class="item" data-key="rings"><span>Onion Rings</span><span class="price" data-price>3.25</span><div class="actions"><button class="btn add">Add</button><button class="btn minus">−</button><span class="qty" data-qty>0</span></div></li>
+        <li class="item" data-key="salad"><span>Side Salad</span><span class="price" data-price>3.00</span><div class="actions"><button class="btn add">Add</button><button class="btn minus">−</button><span class="qty" data-qty>0</span></div></li>
+        <li class="item" data-key="cookie"><span>Cookie</span><span class="price" data-price>1.50</span><div class="actions"><button class="btn add">Add</button><button class="btn minus">−</button><span class="qty" data-qty>0</span></div></li>
+        <li class="item" data-key="icecream"><span>Ice Cream Cup</span><span class="price" data-price>2.25</span><div class="actions"><button class="btn add">Add</button><button class="btn minus">−</button><span class="qty" data-qty>0</span></div></li>
+      </ul>
+    </section>
+
+    <!-- CART / SUMMARY -->
+    <aside class="cart">
+      <h2>Cart</h2>
+      <div class="customer">
+        <label>
+          <span class="muted">Customer</span><br />
+          <input id="customerName" placeholder="Name for receipt" />
+        </label>
+      </div>
+
+      <ul id="cartList" class="cart-list empty">
+        <li class="muted">No items yet. Add something from the menu →</li>
+      </ul>
+
+      <div class="totals">
+        <div class="line"><span class="muted">Drinks</span><span id="drinksSubtotal">$0.00</span></div>
+        <div class="line"><span class="muted">Sandwiches</span><span id="sandwichesSubtotal">$0.00</span></div>
+        <div class="line"><span class="muted">Desserts & Sides</span><span id="dessertsSubtotal">$0.00</span></div>
+        <hr />
+        <div class="line"><span class="muted">Subtotal</span><span id="subtotal">$0.00</span></div>
+        <div class="line"><span class="muted">Tax (8%)</span><span id="tax">$0.00</span></div>
+        <div class="line total"><span>Total</span><span id="total">$0.00</span></div>
+      </div>
+
+      <div class="cart-actions">
+        <button id="clearCart" class="btn outline">Clear Cart</button>
+        <button id="printBtn" class="btn">Print Receipt</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="wrap">
+    <p class="muted"><span id="year"></span> Built by <strong>Travis Routhier</strong></p>
+  </footer>
+  <!-- Order Summary Modal -->
+<div id="summaryModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card">
+    <h3 id="modalTitle">Order Summary</h3>
+
+    <p class="muted" style="margin:6px 0 10px">
+      Customer: <strong id="modalCustomer">—</strong>
+    </p>
+
+    <ul id="modalItems" class="modal-list">
+      <!-- fill in by JS -->
+    </ul>
+
+    <div class="totals" style="margin-top:8px">
+      <div class="line"><span class="muted">Subtotal</span><span id="modalSubtotal">$0.00</span></div>
+      <div class="line"><span class="muted">Tax (8%)</span><span id="modalTax">$0.00</span></div>
+      <div class="line total"><span>Total</span><span id="modalTotal">$0.00</span></div>
+    </div>
+
+    <div class="modal-actions">
+      <button id="modalClose" class="btn outline">Close</button>
+      <button id="modalPrint" class="btn">Print</button>
+    </div>
+  </div>
+</div>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
