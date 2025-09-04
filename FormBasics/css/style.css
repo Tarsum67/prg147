@@ -1,0 +1,245 @@
+:root {
+  --bg: #0b1220;
+  --ink: #e9f1ff;
+  --muted: #a7b4d4;
+  --card: #121a2b;
+  --accent: #69f2aa;
+  --outline: #23304d;
+  --danger: #ff8a8a;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, Segoe UI, Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.45;
+}
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+h1 {
+  margin: 18px 0 6px;
+  font-size: 1.8rem;
+}
+.muted {
+  color: var(--muted);
+}
+.layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 16px;
+  padding: 10px 0 24px;
+}
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+section,
+.cart {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.015)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 14px;
+}
+h2 {
+  margin: 4px 0 10px;
+  font-size: 1.2rem;
+}
+h3 {
+  margin: 14px 0 8px;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.item {
+  display: grid;
+  grid-template-columns: 1fr 70px 150px;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+.item + .item {
+  margin-top: 8px;
+}
+.item.active {
+  background: rgba(124, 214, 255, 0.06);
+  border-color: rgba(124, 214, 255, 0.18);
+}
+.price::before {
+  content: "$";
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.qty {
+  min-width: 22px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--accent);
+  color: #0b1220;
+  transition: transform 0.04s ease;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn.minus {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--ink);
+}
+.btn.outline {
+  background: transparent;
+  border: 1px solid var(--outline);
+  color: var(--ink);
+}
+
+.customer {
+  margin-bottom: 8px;
+}
+.customer input {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--ink);
+}
+
+.cart-list {
+  list-style: none;
+  margin: 8px 0 12px;
+  padding: 0;
+  border-top: 1px dashed var(--outline);
+}
+.cart-list li {
+  display: grid;
+  grid-template-columns: 1fr 80px 28px;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px dashed var(--outline);
+  padding: 8px 0;
+}
+.cart-list.empty {
+  border: 0;
+}
+.cart .remove {
+  background: transparent;
+  border: 1px solid var(--outline);
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.totals {
+  border-top: 1px solid var(--outline);
+  padding-top: 10px;
+}
+.line {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 0;
+}
+.total {
+  font-weight: 800;
+}
+
+.cart-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+hr {
+  border: 0;
+  border-top: 1px solid var(--outline);
+  margin: 10px 0;
+}
+footer {
+  padding: 14px 0 28px;
+}
+/* --- Modal --- */
+.modal.hidden {
+  display: none;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);     
+  backdrop-filter: blur(2px);   
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  z-index: 9999;
+}
+.modal-card {
+  width: min(540px, 100%);
+ background: var(--card, #121a2b);  /* solid color, not transparent */
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.6);
+  padding: 16px;
+}
+.modal-card h3 {
+  margin: 0 0 4px;
+  font-size: 1.25rem;
+}
+.modal-list {
+  list-style: none;
+  margin: 8px 0 6px;
+  padding: 0;
+}
+.modal-list li {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--outline);
+}
+.modal-list li:last-child {
+  border-bottom: 0;
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+@media print {
+  body * { visibility: hidden; }
+  #summaryModal, #summaryModal * { visibility: visible; }
+  #summaryModal {
+    position: absolute;
+    inset: 0;
+    display: block !important;
+  }
+}
+
