@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guardians Rising Roster</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="scripts/index.js" defer></script>
+  </head>
+
+  <body onload="init()">
+    <header class="wrap">
+      <h1>Guardians Rising</h1>
+      <p class="muted">Click a Guardian's name to see their bio.</p>
+    </header>
+
+    <main class="wrap">
+      <section>
+        <div id="list" class="list"></div>
+      </section>
+    </main>
+
+    <template id="item-template">
+      <article class="item">
+        <button class="name-btn"></button>
+        <div class="bio-box" hidden>
+          <h3 class="title"></h3>
+          <img class="hero" alt="" />
+          <p class="meta-line"></p>
+          <p class="bio"></p>
+        </div>
+      </article>
+    </template>
+  </body>
+</html>
