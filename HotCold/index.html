@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hot and Cold</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>Hot/Cold Guessing Game</h1>
+      <p class="sub">
+        Guess the secret number between <strong>1</strong> and
+        <strong>1000</strong>.
+      </p>
+    </header>
+
+    <main class="container" id="game" aria-live="polite">
+      <form id="guess-form" autocomplete="off">
+        <label for="guess" class="visually-hidden"
+          >Enter your guess (1-1000)</label
+        >
+        <input
+          id="guess"
+          name="guess"
+          type="number"
+          min="1"
+          max="1000"
+          placeholder="Enter a number 1-1000"
+          required
+          inputmode="numeric"
+        />
+        <button id="submit-btn" type="submit">Guess</button>
+        <button
+          id="reset-btn"
+          type="button"
+          class="secondary"
+          title="Start a new game"
+        >
+          Reset
+        </button>
+      </form>
+
+      <section class="status">
+        <p id="feedback" class="feedback">Make your first guess!</p>
+        <p class="meta">
+          Attempts: <span id="attempts">0</span>
+          <span class="divider">•</span>
+          Range: <span id="range">1 - 1000</span>
+        </p>
+        <div class="thermo-wrap" aria-hidden="true">
+          <div id="thermo" class="thermo"></div>
+        </div>
+      </section>
+
+      <section class="history">
+        <h2 class="visually-hidden">Guess History</h2>
+        <ul id="history" class="chips" aria-label="Previous guesses"></ul>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p>Created by <strong>Travis Routhier</strong> • Module 2 Assessment 4</p>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
