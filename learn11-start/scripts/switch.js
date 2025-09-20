@@ -1,33 +1,58 @@
 function calculate() {
-    chi = '';
-    myname = document.getElementById("fname").value;
-    month = parseInt(document.getElementById("month").value);
-    date = parseInt(document.getElementById("date").value);
-    year = parseInt(document.getElementById("year").value);
+    let chi = '';
+    let myname = document.getElementById("fname").value;
+    let month = parseInt(document.getElementById("month").value);
+    let date = parseInt(document.getElementById("date").value);
+    let year = parseInt(document.getElementById("year").value);
 
+ // Handle invalid input
+    if (isNaN(year)) {
+        document.getElementById("chinese").innerHTML = "Please enter a valid year.";
+        return;
+    }
 
-    switch (year) {
-        case 1924:
-        case 1936:
-        case 1948:
-        case 1960:
-        case 1972:
-        case 1984:
-        case 1996:
-        case 2008:
-        case 2020:
-            chi = "Rat"
+    
+    // Chinese zodiac repeats every 12 years
+    //using the modulus operator to find the remainder when year is divided by 12
+    switch (year % 12) {
+        case 4:
+            chi = "Rat";
             break;
-        case 1973:
-        case 1974:
-            chi = "Ha ha ha ha ha "
+        case 5:
+            chi = "Ox";
             break;
-
-
+        case 6:
+            chi = "Tiger";
+            break;
+        case 7:
+            chi = "Rabbit";
+            break;
+        case 8:
+            chi = "Dragon";
+            break;
+        case 9:
+            chi = "Snake";
+            break;
+        case 10:
+            chi = "Horse";
+            break;
+        case 11:
+            chi = "Goat";
+            break;
+        case 0:
+            chi = "Monkey";
+            break;
+        case 1:
+            chi = "Rooster";
+            break;
+        case 2:
+            chi = "Dog";
+            break;
+        case 3:
+            chi = "Pig";
+            break;
         default:
-            chi = "Sadface";
-
-
+            chi = "Sadface"; 
     }
     document.getElementById("nameout").innerHTML = myname;
     document.getElementById("chinese").innerHTML = "Your Chinese zodiac sign is: " + chi;
