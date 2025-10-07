@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JavaScript Classes & Modules Training Sessions</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Training Sessions (Classes & Modules)</h1>
+      <p class="subtitle">
+        A simple demo using ES Modules with a custom class.
+      </p>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Session Summaries</h2>
+        <p id="result1" class="result" aria-live="polite"></p>
+        <p id="result2" class="result" aria-live="polite"></p>
+        <p id="result3" class="result" aria-live="polite"></p>
+        <p id="result4" class="result" aria-live="polite"></p>
+      </section>
+
+      <section class="card">
+        <h2>Average Intensity</h2>
+        <p id="avgIntensity" class="result" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><span id="year"></span> Travis Routhier</p>
+    </footer>
+
+    <script type="module" src="scripts/index.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
