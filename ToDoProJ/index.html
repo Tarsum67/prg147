@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work Day Schedule</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="wrap">
+      <h1>Work Day Schedule</h1>
+      <p id="today" class="subhead" aria-live="polite">Loading date…</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Grid headings -->
+    <div class="grid grid-header" aria-hidden="true">
+      <div class="col time-col">Time</div>
+      <div class="col event-col">Event</div>
+      <div class="col action-col">Save</div>
+    </div>
+
+    <!-- Time blocks will be inserted here by JS -->
+    <section id="schedule" class="schedule" aria-label="Daily schedule"></section>
+
+    <div class="tips">
+      <p><span class="legend past"></span> Past &nbsp; <span class="legend present"></span> Current Hour &nbsp; <span class="legend future"></span> Upcoming</p>
+      <p>Type your plan in a row and press the lock to save. Your entries are stored locally on this device.</p>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <div class="wrap">
+      <small> <span id="year"></span> Travis Routhier Work Day Schedule</small>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
