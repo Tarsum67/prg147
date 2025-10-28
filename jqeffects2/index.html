@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Module 4  jQuery Effects Demo</title>
+
+  <!-- jQuery (Google CDN) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>jQuery Effects: Animate stop() Callback Chaining</h1>
+    <p class="sub">Use the buttons or arrow keys to move the square. Try the demo chain and stop buttons too.</p>
+  </header>
+
+  <main class="container">
+    <section class="controls" aria-label="Movement controls">
+      <div class="dpad">
+        <button id="btnUp" aria-label="Move Up">▲</button>
+        <div class="middle-row">
+          <button id="btnLeft" aria-label="Move Left">◀</button>
+          <button id="btnRight" aria-label="Move Right">▶</button>
+        </div>
+        <button id="btnDown" aria-label="Move Down">▼</button>
+      </div>
+
+        <div class="actions">
+        <button id="btnStop" type="button" class="danger">Stop Animations</button>
+        <button id="btnReset" type="button">Reset Position</button>
+        <button id="btnChain" type="button">Run Chaining </button>
+        <button id="btnRunLoop" type="button">Run Loop</button>
+      </div>
+    </section>
+
+    <section class="stage-wrap">
+      <div id="stage" aria-label="Animation stage" tabindex="0">
+        <!-- Move this element -->
+        <div id="player" role="img" aria-label="Movable box"></div>
+
+        <!-- Separate box to show chaining -->
+        <div id="chainBox" aria-label="Chaining demo box">Chain</div>
+      </div>
+
+      <div id="status" aria-live="polite" class="status">Ready.</div>
+    </section>
+  </main>
+
+ 
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>

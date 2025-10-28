@@ -1,0 +1,138 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --accent: #22c55e;
+  --danger: #ef4444;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  background: linear-gradient(180deg, #0b1022, #0f172a 30%, #0f172a 100%);
+  color: var(--text);
+}
+
+.container {
+  max-width: 980px;
+  margin: 1.25rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  margin: 1rem 0 0.25rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+}
+
+.sub {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.dpad {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 0.5rem;
+  place-items: center;
+}
+
+.dpad button {
+  width: 64px;
+  height: 48px;
+  font-size: 1.25rem;
+  border: 0;
+  border-radius: 12px;
+  background: #1f2937;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease;
+}
+.dpad button:hover { transform: translateY(-2px); background: #273449; }
+
+.middle-row {
+  display: grid;
+  grid-template-columns: repeat(2, 64px);
+  gap: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.actions button {
+  padding: 0.6rem 0.9rem;
+  border: 0;
+  border-radius: 10px;
+  background: #1f2937;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease;
+}
+.actions button:hover { transform: translateY(-2px); background: #273449; }
+.actions .danger { background: #2a1b1d; }
+.actions .danger:hover { background: #3a2225; color: #ffd9d9; }
+
+.stage-wrap {
+  background: #0b1220;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 0 0 1px #1f2937 inset, 0 6px 24px rgba(0,0,0,0.45);
+}
+
+#stage {
+  position: relative;
+  height: 420px;
+  background: #0b1220;
+  border-radius: 12px;
+  outline: 1px solid #1f2937;
+  overflow: hidden; /* keep boxes inside */
+}
+
+/* Movable square */
+#player {
+  position: absolute;
+  top: 170px;  /* centered-ish to start */
+  left: 210px;
+  width: 80px;
+  height: 80px;
+  background: var(--accent);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(34, 197, 94, 0.35);
+}
+
+/* Chaining demo box */
+#chainBox {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #334155;
+  color: #e5e7eb;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.status {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+
