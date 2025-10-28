@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>jQuery Effects Demo — Hide/Show, Fade, Slide</title>
+
+  <!-- Google CDN for jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>jQuery Effects Demo</h1>
+    <p class="sub">Hide/Show • Fade • Slide</p>
+  </header>
+
+  <main class="container">
+    <!-- Controls -->
+    <section class="controls" aria-label="Effect Controls">
+      <div class="control-group">
+        <h2>Hide / Show</h2>
+        <button id="btn-hide-cards" class="btn" type="button">Hide Cards</button>
+        <button id="btn-show-cards" class="btn" type="button">Show Cards</button>
+        <button id="btn-toggle-cards" class="btn" type="button">Toggle Cards</button>
+      </div>
+
+      <div class="control-group">
+        <h2>Fade</h2>
+        <button id="btn-fade-out" class="btn" type="button">Fade Out Images</button>
+        <button id="btn-fade-in" class="btn" type="button">Fade In Images</button>
+        <button id="btn-fade-toggle" class="btn" type="button">Fade Toggle Images</button>
+      </div>
+
+      <div class="control-group">
+        <h2>Slide</h2>
+        <button id="btn-slide-up" class="btn" type="button">Slide Up Details</button>
+        <button id="btn-slide-down" class="btn" type="button">Slide Down Details</button>
+        <button id="btn-slide-toggle" class="btn" type="button">Slide Toggle Details</button>
+      </div>
+
+      <div class="control-group">
+        <h2>Reset</h2>
+        <button id="btn-reset" class="btn btn-reset" type="button">Reset Everything</button>
+      </div>
+    </section>
+
+    <!-- Gallery Grid  -->
+    <section class="grid" aria-label="Image Cards">
+      <!-- Card 1 -->
+      <article class="card" data-card>
+        <img src="https://picsum.photos/id/1015/600/400" alt="Mountain landscape with river" class="card-img" />
+        <div class="card-body">
+          <h3>Mountains & River</h3>
+          <p class="details">
+            Serene mountain pass with a winding river. Click controls above to hide/show, fade, or slide.
+          </p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" data-card>
+        <img src="https://picsum.photos/id/1025/600/400" alt="Close-up of a dog" class="card-img" />
+        <div class="card-body">
+          <h3>Good Boy</h3>
+          <p class="details">
+            Loyal companion posing for the camera. Try the fade buttons to see effects on images only.
+          </p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" data-card>
+        <img src="https://picsum.photos/id/1035/600/400" alt="Forest with tall green trees" class="card-img" />
+        <div class="card-body">
+          <h3>Green Forest</h3>
+          <p class="details">
+            Tall evergreens under soft light. Slide the “details” open and closed with Slide controls.
+          </p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card" data-card>
+        <img src="https://picsum.photos/id/1041/600/400" alt="Ocean waves near rocks" class="card-img" />
+        <div class="card-body">
+          <h3>Coastline</h3>
+          <p class="details">
+            Rolling waves breaking against the rocks. Combine effects in any order—then reset.
+          </p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+ 
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
