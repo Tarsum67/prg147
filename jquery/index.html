@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Module 4 — jQuery HTML Demo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- jQuery (Google CDN) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+  <script src="scripts/app.js" defer></script>
+</head>
+<body class="theme-light">
+  <header class="site-header">
+    <h1>jQuery HTML / CSS / Classes Demo</h1>
+    <p class="subhead">Get values, append to the page, change styles, and toggle classes.</p>
+  </header>
+
+  <main class="wrap">
+    <!-- Controls -->
+    <section aria-labelledby="appearance-controls" class="controls">
+      <h2 id="appearance-controls" class="visually-hidden">Appearance Controls</h2>
+      <div class="control-row">
+        <button id="btnLight" type="button" class="btn">Light Theme</button>
+        <button id="btnDark" type="button" class="btn">Dark Theme</button>
+        <button id="btnIncrease" type="button" class="btn">A+</button>
+        <button id="btnDecrease" type="button" class="btn">A-</button>
+      </div>
+    </section>
+
+    <!-- Form -->
+    <section aria-labelledby="user-form" class="card">
+      <h2 id="user-form">Tell Us About You</h2>
+      <form id="infoForm">
+        <div class="grid">
+          <label>
+            <span>Full Name</span>
+            <input id="fullName" type="text" placeholder="e.g., Travis R" required />
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input id="email" type="email" placeholder="you@example.com" required />
+          </label>
+
+          <label>
+            <span>Favorite Color</span>
+            <input id="favColor" type="text" placeholder="e.g., Blue" />
+          </label>
+
+          <label>
+            <span>Favorite Animal</span>
+            <select id="favAnimal">
+              <option value="">Choose one…</option>
+              <option>Dog</option>
+              <option>Cat</option>
+              <option>Otter</option>
+              <option>Hawk</option>
+              <option>Fox</option>
+            </select>
+          </label>
+
+          <label class="grid-span-2">
+            <span>Short Bio</span>
+            <textarea id="bio" rows="3" placeholder="Write a sentence or two…"></textarea>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button id="btnAdd" type="submit" class="btn primary">Append to Page</button>
+          <button id="btnClearOutput" type="button" class="btn danger">Clear Output</button>
+        </div>
+      </form>
+
+      <p id="notice" class="notice" aria-live="polite"></p>
+    </section>
+
+    <!-- Output Area -->
+    <section aria-labelledby="output-title" class="card">
+      <h2 id="output-title">Appended Entries</h2>
+      <div id="output" class="output" tabindex="0" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Built for Module 4: jQuery HTML assignment.</small>
+  </footer>
+</body>
+</html>
