@@ -1,0 +1,6 @@
+<h2>Content Loaded via jQuery AJAX</h2>
+<p>
+  This heading and paragraph were loaded from a separate text file
+  using the jQuery <code>.load()</code> method. This demonstrates how
+  AJAX can be used to bring in external content without reloading the page.
+</p>

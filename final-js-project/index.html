@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 5 Final Project – JavaScript Libraries</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Your JS files -->
+  <script src="js/data.js" defer></script>
+  <script src="js/animation.js" defer></script>
+  <script src="js/ajax.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Module 5 Final Project – JavaScript Libraries</h1>
+    <p>JSON • jQuery Animation • jQuery AJAX</p>
+  </header>
+
+  <!-- JSON SECTION -->
+  <section id="json-section">
+    <h2>JSON Demo: TV Shows</h2>
+    <p>
+      This section demonstrates using JSON-like JavaScript objects to store
+      data about TV shows, then displaying that data on the page using JavaScript.
+    </p>
+    <div id="tv-show-list" class="card-grid">
+      <!-- JS will inject cards here -->
+    </div>
+  </section>
+
+  <!-- jQUERY ANIMATION SECTION -->
+  <section id="animation-section">
+    <h2>jQuery Animation Demo</h2>
+    <p>
+      This section demonstrates a jQuery animation. A card starts off-screen to the left
+      and slides into view toward the center of the browser window using <code>.animate()</code>.
+    </p>
+
+    <div id="animated-card">
+     <h3>Stranger Things  Season 5</h3>
+  <p>
+    The final chapter returns to Hawkins as Eleven and her friends face their greatest threat yet.
+    Dark secrets about the Upside Down are revealed while a new evil rises to end their world.
+  </p>
+      <img src="imgs/ST.png" alt="Stranger Things Season 5 Poster">
+    </div>
+  </section>
+
+  <!-- jQUERY AJAX SECTION -->
+  <section id="ajax-section">
+    <h2>jQuery AJAX Demo</h2>
+    <p>
+      This section demonstrates using jQuery AJAX to load HTML content from a text file
+      and display it on the page when a button is clicked.
+    </p>
+
+    <button id="loadTextBtn">Load Content from Text File</button>
+    <div id="ajaxOutput" class="ajax-output">
+      <!-- Content from text/content.txt will appear here -->
+    </div>
+  </section>
+
+  <footer>
+    <p> 2025  Module 5 Final Project</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+}
+
+/* Banner / header */
+.banner {
+  background-color: #1e293b;
+  color: #ffffff;
+  padding: 20px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.banner-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.banner h1 {
+  margin: 0 0 6px 0;
+  font-size: 1.8rem;
+}
+
+.banner-subtitle {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.banner-name {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Simple nav */
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+}
+
+.nav-list li {
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background-color: #334155;
+}
+
+/* Main content */
+.main-content {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0 16px 40px 16px;
+}
+
+.content-section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.content-section h2,
+.content-section h3 {
+  margin-top: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #0f172a;
+  color: #e5e7eb;
+  text-align: center;
+  padding: 14px 10px 18px 10px;
+  font-size: 0.9rem;
+}
